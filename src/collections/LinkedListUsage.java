@@ -1,4 +1,4 @@
 package collections;
 
-public class LinkedListUsage {
+public class LinkedListUsage extends TextSeparator{
 }

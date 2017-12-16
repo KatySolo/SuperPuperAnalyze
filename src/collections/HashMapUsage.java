@@ -1,4 +1,4 @@
 package collections;
 
-public class HashMapUsage {
+public class HashMapUsage extends TextSeparator{
 }

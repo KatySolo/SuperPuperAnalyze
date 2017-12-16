@@ -1,4 +1,4 @@
 package collections;
 
-public class TreeSetUsage {
+public class TreeSetUsage extends TextSeparator{
 }

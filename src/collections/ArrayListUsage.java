@@ -1,4 +1,4 @@
 package collections;
 
-public class ArrayListUsage {
+public class ArrayListUsage extends TextSeparator{
 }
