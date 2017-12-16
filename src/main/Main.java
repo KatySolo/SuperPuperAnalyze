@@ -1,5 +1,7 @@
 package main;
 
+import collections.ArrayListUsage;
+
 public class Main {
     public static void main (String[] args)
     {
@@ -23,5 +25,9 @@ public class Main {
 //
 //
 //        Можно сделать класс Pair (ну там слово - значение), задать на нем Compare, чтоб можно было сортировать ArrayList<Pair>
+
+        ArrayListUsage list = new ArrayListUsage();
+        String[] arr = list.loadText();
+        System.out.println(arr);
     }
 }
