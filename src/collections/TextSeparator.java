@@ -3,23 +3,27 @@ package collections;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class TextSeparator {
+public abstract class TextSeparator {
 
     public String[] loadText(){
         try{
             FileInputStream fstream = new FileInputStream("C:/file.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            StringBuilder builder = new StringBuilder();
             String strLine;
             while ((strLine = br.readLine()) != null){
-                strLine += strLine;
+                builder.append(strLine);
             }
-            return strLine.split(" ");
+            return builder.toString().split(" ");
         }catch (Exception e){
             System.out.println("Ошибка");
         }
         return new String[0];
     }
+
+    public abstract void analyze(String[] words);
+
+    public abstract void search(String word, int count);
 }
