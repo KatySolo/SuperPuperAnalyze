@@ -1,6 +1,7 @@
 package main;
 
 import collections.ArrayListUsage;
+import collections.HashMapUsage;
 
 public class Main {
     public static void main (String[] args)
@@ -26,8 +27,14 @@ public class Main {
 //
 //        Можно сделать класс Pair (ну там слово - значение), задать на нем Compare, чтоб можно было сортировать ArrayList<Pair>
 
-        ArrayListUsage list = new ArrayListUsage();
-        String[] arr = list.loadText();
-        System.out.println(arr);
+        HashMapUsage hashMapUsage = new HashMapUsage();
+        String[] arr = hashMapUsage.loadText();
+        hashMapUsage.CreateFreqDict(arr);
+        System.out.print("fff");
+
+        ArrayListUsage arrayListUsage = new ArrayListUsage();
+        arr = arrayListUsage.loadText();
+        arrayListUsage.CreateFreqDict(arr);
+        System.out.print("fff");
     }
 }
