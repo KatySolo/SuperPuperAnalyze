@@ -3,6 +3,7 @@ package collections;
 import com.sun.org.apache.xml.internal.utils.Hashtree2Node;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class HashMapUsage extends TextSeparator implements IExperement{
 
@@ -10,6 +11,7 @@ public class HashMapUsage extends TextSeparator implements IExperement{
     public HashMapUsage()
     {
         hashMap = new HashMap<>();
+        Entry.allEntries = new HashSet<>();
     }
 
     public void CreateFreqDict(String[] words)

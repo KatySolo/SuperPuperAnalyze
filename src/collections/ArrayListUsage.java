@@ -1,6 +1,7 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ArrayListUsage extends TextSeparator implements IExperement{
 
@@ -8,6 +9,7 @@ public class ArrayListUsage extends TextSeparator implements IExperement{
 
     public ArrayListUsage () {
         arrayList = new ArrayList<>();
+        Entry.allEntries = new HashSet<>();
     }
 
     public void CreateFreqDict(String[] words)
@@ -16,15 +18,19 @@ public class ArrayListUsage extends TextSeparator implements IExperement{
         {
             if (word.length() >= 3)
             {
-                if (!arrayList.contains(new Entry(word)))
-                {
-                    arrayList.add(new Entry(word));
-                }
-                else
-                {
-                    Entry foundEntry = arrayList.get(arrayList.indexOf(new Entry(word)));
-                    foundEntry.IncrementValue();
-                }
+                if ()
+//                if (!Entry.allEntries.contains(new Entry(word))) //todo проверить работает ли
+//                {
+//                    Entry newEntry = new Entry(word);
+//                    arrayList.add(newEntry);
+//                    Entry.addToSet(newEntry);
+//
+//                }
+//                else
+//                {
+//                    Entry foundEntry = arrayList.get(arrayList.indexOf(new Entry(word)));
+//                    foundEntry.IncrementValue();
+//                }
             }
         }
     }
