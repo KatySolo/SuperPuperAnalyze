@@ -2,6 +2,8 @@ package main;
 
 import collections.ArrayListUsage;
 import collections.HashMapUsage;
+import collections.LinkedListUsage;
+import collections.TreeSetUsage;
 
 public class Main {
     public static void main (String[] args)
@@ -29,17 +31,27 @@ public class Main {
 
         HashMapUsage hashMapUsage = new HashMapUsage();
         String[] arr = hashMapUsage.loadText();
-        hashMapUsage.CreateFreqDict(arr);
-        System.out.print("fff");
+        hashMapUsage.analyze(arr);
+        System.out.println("fff");
 
         ArrayListUsage arrayListUsage = new ArrayListUsage();
         arr = arrayListUsage.loadText();
-        arrayListUsage.CreateFreqDict(arr);
-        System.out.print("fff");
+        arrayListUsage.analyze(arr);
+        System.out.println("fff");
+
+        LinkedListUsage linkedListUsage = new LinkedListUsage();
+        arr = linkedListUsage.loadText();
+        linkedListUsage.analyze(arr);
+        System.out.println("fff");
+
+        TreeSetUsage treeSetUsage = new TreeSetUsage();
+        arr = treeSetUsage.loadText();
+        treeSetUsage.analyze(arr);
+        System.out.println("fff");
     }
     // todo прочитать мою идею
     /*
-    Для HashMap все понятно, это просто словарь, а все остальное мы будем хранить через записи Entry
+    Для HashMap все понятно, это просто словарь, а все остальное мы будем хранить через записи TextEntry
     Но //todo придумать как проверять наличие записи в структуре
     более того, нужно понять что делать с этим всем
     //todo убрать статичный сет всех записей

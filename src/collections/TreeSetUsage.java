@@ -1,8 +1,16 @@
 package collections;
 
-public class TreeSetUsage extends TextSeparator implements IExperement{
-    @Override
-    public void CreateFreqDict(String[] words) {
+import java.util.ArrayList;
 
+public class TreeSetUsage extends Analyzer implements IExperement{
+
+    @Override
+    public void analyze(String[] words) {
+
+    }
+
+    @Override
+    public ArrayList<TextEntry> search(String prefix, int count) {
+        return null;
     }
 }
