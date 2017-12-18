@@ -35,15 +35,15 @@ public class Main {
         hashMapUsage.analyze(arr);
         System.out.println("fff");
 
-        ArrayListUsage arrayListUsage = new ArrayListUsage();
-        arr = arrayListUsage.loadText(path);
-        arrayListUsage.analyze(arr);
-        System.out.println("fff");
-
-        LinkedListUsage linkedListUsage = new LinkedListUsage();
-        arr = linkedListUsage.loadText(path);
-        linkedListUsage.analyze(arr);
-        System.out.println("fff");
+//        ArrayListUsage arrayListUsage = new ArrayListUsage();
+//        arr = arrayListUsage.loadText(path);
+//        arrayListUsage.analyze(arr);
+//        System.out.println("fff");
+//
+//        LinkedListUsage linkedListUsage = new LinkedListUsage();
+//        arr = linkedListUsage.loadText(path);
+//        linkedListUsage.analyze(arr);
+//        System.out.println("fff");
 
 
         TreeSetUsage treeSetUsage = new TreeSetUsage();
@@ -53,7 +53,7 @@ public class Main {
 
         ArrayList<TextEntry> result = new ArrayList<>();
 
-        String word = "e";
+        String word = "a";
         int count = 5;
 
         result = hashMapUsage.search(word, count);
@@ -61,15 +61,15 @@ public class Main {
             System.out.println(entry);
         System.out.println("ddd");
 
-        result = arrayListUsage.search(word, count);
-        for (TextEntry entry: result)
-            System.out.println(entry);
-        System.out.println("ddd");
-
-        result = linkedListUsage.search(word,count);
-        for (TextEntry entry: result)
-            System.out.println(entry);
-        System.out.println("ddd");
+//        result = arrayListUsage.search(word, count);
+//        for (TextEntry entry: result)
+//            System.out.println(entry);
+//        System.out.println("ddd");
+//
+//        result = linkedListUsage.search(word,count);
+//        for (TextEntry entry: result)
+//            System.out.println(entry);
+//        System.out.println("ddd");
 
         result = treeSetUsage.search(word, count);
         for (TextEntry entry: result)

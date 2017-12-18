@@ -53,15 +53,13 @@ public class TreeSetUsage extends Analyzer implements IExperement{
                 while(entry.getKey().startsWith(prefix) && itr.hasNext()){
                     valuesList.add(entry);
                     entry = (TextEntry) itr.next();
-                    if (valuesList.size() == count)
-                        break;
                 }
             }
             if (started)
                 break;
         }
 
-        Collections.sort(valuesList, valueComparator.reversed().thenComparing(keyComparator));
+        Collections.sort(valuesList, valueComparator.reversed());
 
         int size = count > valuesList.size() ? valuesList.size() : count;
         ArrayList<TextEntry> finalValues = new ArrayList<>(valuesList.subList(0, size));
