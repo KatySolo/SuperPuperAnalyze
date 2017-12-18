@@ -1,9 +1,8 @@
 package main;
 
-import collections.ArrayListUsage;
-import collections.HashMapUsage;
-import collections.LinkedListUsage;
-import collections.TreeSetUsage;
+import collections.*;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main (String[] args)
@@ -29,25 +28,54 @@ public class Main {
 //
 //        Можно сделать класс Pair (ну там слово - значение), задать на нем Compare, чтоб можно было сортировать ArrayList<Pair>
 
+        String path = "D:\\IT\\ООП\\практика\\SuperPuperAnalyze\\src\\collections\\WaP.txt";
+
         HashMapUsage hashMapUsage = new HashMapUsage();
-        String[] arr = hashMapUsage.loadText();
+        String[] arr = hashMapUsage.loadText(path);
         hashMapUsage.analyze(arr);
         System.out.println("fff");
 
         ArrayListUsage arrayListUsage = new ArrayListUsage();
-        arr = arrayListUsage.loadText();
+        arr = arrayListUsage.loadText(path);
         arrayListUsage.analyze(arr);
         System.out.println("fff");
 
         LinkedListUsage linkedListUsage = new LinkedListUsage();
-        arr = linkedListUsage.loadText();
+        arr = linkedListUsage.loadText(path);
         linkedListUsage.analyze(arr);
         System.out.println("fff");
 
+
         TreeSetUsage treeSetUsage = new TreeSetUsage();
-        arr = treeSetUsage.loadText();
+        arr = treeSetUsage.loadText(path);
         treeSetUsage.analyze(arr);
         System.out.println("fff");
+
+        ArrayList<TextEntry> result = new ArrayList<>();
+
+        String word = "e";
+        int count = 5;
+
+        result = hashMapUsage.search(word, count);
+        for (TextEntry entry: result)
+            System.out.println(entry);
+        System.out.println("ddd");
+
+        result = arrayListUsage.search(word, count);
+        for (TextEntry entry: result)
+            System.out.println(entry);
+        System.out.println("ddd");
+
+        result = linkedListUsage.search(word,count);
+        for (TextEntry entry: result)
+            System.out.println(entry);
+        System.out.println("ddd");
+
+        result = treeSetUsage.search(word, count);
+        for (TextEntry entry: result)
+            System.out.println(entry);
+        System.out.println("ddd");
+
     }
     // todo прочитать мою идею
     /*

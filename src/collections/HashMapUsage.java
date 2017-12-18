@@ -4,11 +4,10 @@ import java.util.*;
 import java.util.Map.Entry;
 
 public class HashMapUsage extends Analyzer implements IExperement{
+    HashMap<String, Integer> entries;
 
-    HashMap<String, Integer> hashMap;
-    public HashMapUsage()
-    {
-        hashMap = new HashMap<>();
+    public HashMapUsage() {
+        entries = new HashMap<>();
     }
 
     @Override
@@ -16,10 +15,10 @@ public class HashMapUsage extends Analyzer implements IExperement{
     {
         for(String word: words)
             if (word.length() >= 3) {
-                if (!hashMap.containsKey(word))
-                    hashMap.put(word, 1);
+                if (!entries.containsKey(word))
+                    entries.put(word, 1);
                 else
-                    hashMap.put(word, hashMap.get(word) + 1);
+                    entries.put(word, entries.get(word) + 1);
             }
     }
 
@@ -32,7 +31,7 @@ public class HashMapUsage extends Analyzer implements IExperement{
         //т.к. словарь не может хранить TextEntry, то приходится лишний раз пробегать и создавать эти TextEntry вручную
         //Чтобы это изменить придется убрать "extends Analyzer implements IExperement", но тогда код не будет полиморфным
 
-        Set<Entry<String, Integer>> entrySet = hashMap.entrySet();
+        Set<Entry<String, Integer>> entrySet = entries.entrySet();
         Set<Entry<String, Integer>> valuesSet = new HashSet<>();
         for (Entry<String, Integer> entry: entrySet){
             if (entry.getKey().startsWith(prefix))
@@ -46,8 +45,8 @@ public class HashMapUsage extends Analyzer implements IExperement{
         }
 
         int size = count > valuesList.size() ? valuesList.size() : count;
-        Collections.sort(valuesList, valueComparator);
-        ArrayList<TextEntry> finalValues = new ArrayList<>(valuesList.subList(0, size - 1));
+        Collections.sort(valuesList, valueComparator.reversed());
+        ArrayList<TextEntry> finalValues = new ArrayList<>(valuesList.subList(0, size));
 
         return finalValues;
     }

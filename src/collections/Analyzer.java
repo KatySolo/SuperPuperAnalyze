@@ -13,9 +13,9 @@ public abstract class Analyzer {
     final Comparator<TextEntry> keyComparator = comparing(TextEntry::getKey);
     final Comparator<TextEntry> valueComparator = comparing(TextEntry::getAmount);
 
-    public String[] loadText(){
+    public String[] loadText(String path){
         try{
-            FileInputStream fstream = new FileInputStream("D:\\IT\\ООП\\практика\\SuperPuperAnalyze\\src\\collections\\input_test.txt");
+            FileInputStream fstream = new FileInputStream(path);
             BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
             StringBuilder builder = new StringBuilder();
             String strLine;

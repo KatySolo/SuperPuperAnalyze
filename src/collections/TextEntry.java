@@ -1,8 +1,6 @@
 package collections;
 
-import java.util.Objects;
-
-public class TextEntry {
+public class TextEntry{
 
     String key;
     Integer amount;
@@ -33,5 +31,25 @@ public class TextEntry {
     @Override
     public String toString() {
         return key + ", " + amount;
+    }
+
+    @Override
+    public int hashCode() {
+        return key.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        TextEntry other = (TextEntry) obj;
+        if (!key.equals(other.key))
+            return false;
+        //equals специально сравнивает только по полю key
+        return true;
     }
 }
