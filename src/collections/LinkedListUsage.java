@@ -67,4 +67,15 @@ public class LinkedListUsage extends Analyzer implements IExperement{
         //Collections.sort(valuesList, valueComparator.reversed());
         return valuesList;
     }
+
+
+    @Override
+    public void clear() {
+        entries = new LinkedList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedListUsage";
+    }
 }

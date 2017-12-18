@@ -50,4 +50,14 @@ public class HashMapUsage extends Analyzer implements IExperement{
 
         return finalValues;
     }
+
+    @Override
+    public void clear() {
+        entries = new HashMap<>();
+    }
+
+    @Override
+    public String toString() {
+        return "HashMapUsage";
+    }
 }

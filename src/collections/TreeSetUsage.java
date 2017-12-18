@@ -21,7 +21,6 @@ public class TreeSetUsage extends Analyzer implements IExperement{
     }
 
     private void update(String key){
-        Iterator itr = entries.iterator();
         TextEntry temp = new TextEntry(key);
 
         for (TextEntry entry: entries){
@@ -65,5 +64,15 @@ public class TreeSetUsage extends Analyzer implements IExperement{
         ArrayList<TextEntry> finalValues = new ArrayList<>(valuesList.subList(0, size));
 
         return finalValues;
+    }
+
+    @Override
+    public void clear() {
+        entries = new TreeSet<>(keyComparator);
+    }
+
+    @Override
+    public String toString() {
+        return "TreeSetUsage";
     }
 }

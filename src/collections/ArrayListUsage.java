@@ -64,4 +64,14 @@ public class ArrayListUsage extends Analyzer implements IExperement{
         }
         return -1;  // key not found
     }
+
+    @Override
+    public void clear() {
+        entries = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayListUsage";
+    }
 }
